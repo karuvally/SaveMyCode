@@ -118,7 +118,8 @@ class main_window (QtGui.QDialog):
 		configuration_file.write ('archive_format=' + self.ui.comboBox_archive.currentText() + '\n')
 
 		configuration_file.write ('check_interval=' + self.ui.spinBox_interval.cleanText() + '\n')
-		set_up_cron (int (self.ui.spinBox_interval.cleanText()), '/home/aswin/Project/smc_alpha3/smc_loader.py')
+		current_directory = os.getcwd()
+		set_up_cron (int (self.ui.spinBox_interval.cleanText()), current_directory + '/smc_loader.py')
 		
 		configuration_file.write ('smc_priority=' + str (self.ui.slider_priority.value()) + '\n')
 		
