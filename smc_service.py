@@ -7,9 +7,6 @@
 import sys
 import os
 
-#append the smc directory to path
-sys.path.append ('/home/aswin/Project/smc_alpha3')
-
 #import the stuff that i created
 from smc_backup import *
 from smc_dropbox import *
