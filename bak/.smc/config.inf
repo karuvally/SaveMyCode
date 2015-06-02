@@ -1,0 +1,6 @@
+enable_smc=0
+archive_format=tar
+check_interval=1
+smc_priority=19
+dropbox_enable=1
+access_token=None

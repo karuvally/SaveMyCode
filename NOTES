@@ -1,0 +1,100 @@
+savemycode! (alpha release)
+Released under GNU General Public License
+Copyright 2014-2015, Aswin Babu K
+
+alpha3
+-----
+move the cron management function to smc_backup
+remove the sub_directory_list.inf when choosing new root_directory
+comment full source code
+impliment global shortcut key
+addition of cron log
+fix the new subdirectory fail issue
+SPcoPgQ-ogUAAAAAAAAF34rven5AF39ZfJN-YGSiJOg
+create cron compatible smc
+clean up the binaries
+find better algorithms
+impliment smc kill switch
+impliment root folder
+force compile code
+do write_to_log for smc_gui_loader
+move all configuration files to home folder
+
+alpha2
+-----
+Connect to Dropbox, OneDrive and Google Drive
+Global Short Cut Key
+Build a GUI
+A loader script to simply load the smc_service
+Allow user to set priority -> Do the code in smc_service
+do the root directory code
+replace the win32api idle code with nice
+there is some problem with file_integrity module
+ability to check if a drive actually exists
+
+alpha1
+-----
+Maintains a list of folders to be copied
+Copy the folders periodically to a predefined position
+Auto detect backup medium
+Run as a background service
+Have a GUI
+cross platform compatible
+zips the files
+exclude binaries if requested (useful for removing viruses)
+be lightweight
+py2exe
+go modular
+multiple backup locations (a la RAID 1 a.k.a mirroring)
+keep a pretty heavy log
+seperate function for writing log files
+directory movements are done with shutil
+listen for global shortcut
+shows the current backup size
+remind user, if moving to external backup medium is important
+cloud backup? (google drive, dropbox, onedrive)
+does not create new backup when no change is detected
+show the input and output directory names in log
+tests the zipped files for errors :)
+does not check for changes when global shortcut is used
+recursive adding of files
+supports multiple file formats (zip, gzip, tar etc...)
+ability to ignore specific files for changes (eg. the application log)
+supports scp (to backup to remote computers)
+run the backup process at lower priority
+smc_backup returns values to smc_service
+allow exporting settings
+watch for new folders?
+select a root folder, find child folders, and backup them to seperate folders
+backup the folders (while !empty) the moment they are added to input_dir list
+scheduled backup?
+for the artwork emulate the dots on printed medium
+make smc_service the head of the program
+copy files from out_directory to backup_directory, when backup medium is detected
+low compression of files
+make sure the program does not crash even during loads of exceptions
+create output sub directories if they do not exist
+the write_to_log function writes the data to the top of the log file
+
+Random thoughts
+---------------
+read each directory name seperated by newline, categorize all the directories under,
+#Input_DIRs to directories to backup and all directories under #Output_DIRs are directories where the backup is stored
+
+do some sort of simple checksum inorder to check if any change is present in the backed up folders...
+
+i have to deal with those ending slashes in paths, to make sure that,
+they either end like: D:\folder1\folder2\ or end like D:\folder1\folder2 mixup of these two styles, is bound to fail.
+
+fix
+---
+ability to sense if a backup medium is present (eg. usb drive)
+make the program not crash in case of configuration file changes
+
+handling invalid directories
+----------------------------
+create a valid_directory_list() function that returns valid directories :)
+
+check_if_drive_exists
+---------------------
+this can be done to check if the drive in which output directory resides exists
