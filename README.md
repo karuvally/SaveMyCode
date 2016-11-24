@@ -1,4 +1,9 @@
-# SaveMyCode!
+# What is Savemycode?
+SaveMyCode was my mini project during second year of bachelor's degree.
+I thought it would be tremendously useful. Sadly, it is not. You can poke around the code,
+and I would be delighted, if you find something useful...
+
+# What I wrote about it originally
 SaveMyCode! is a backup utility for programmers.
 It monitors the directories you choose for any change in files.
 If changes are found, the whole directory is compressed and backed up.
